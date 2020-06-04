@@ -9,7 +9,7 @@
 ### Script
 
 - dev - Next Dev (`nodemon --exec babel-node server/server.js`)
-- dev:api - only Working `/api` Request (`nodemon --exec babel-node server/server-dev-api.js`)
+- dev:api - Only `/api` requests work (`nodemon --exec babel-node server/server-dev-api.js`)
 - build - Next Build (`next build`)
 - start - Next Start (`cross-env NODE_ENV=production babel-node server/server.js`)
 
