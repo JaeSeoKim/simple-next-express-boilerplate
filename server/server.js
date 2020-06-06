@@ -28,7 +28,7 @@ app.prepare().then(() => {
     return handle(req, res)
   })
 
-  server.listen(port, err => {
+  const appServer = server.listen(port, err => {
     if (err) throw err
     if (process.env.PM2 === 'PM2') process.send('ready') // for pm2
     console.log(`> ✨Ready on http://localhost:${port}`)
@@ -38,7 +38,7 @@ app.prepare().then(() => {
   if (process.env.PM2 === 'PM2') {
     process.on('SIGINT', () => {
       isDisableKeepAlive = true
-      server.close(() => {
+      appServer.close(() => {
         console.log('> 😢 Server closed')
         process.exit(0)
       })
