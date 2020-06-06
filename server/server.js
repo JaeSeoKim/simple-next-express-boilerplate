@@ -10,8 +10,17 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+let isDisableKeepAlive = false
+
 app.prepare().then(() => {
   const server = express()
+
+  server.use((req, res, next) => {
+    if (isDisableKeepAlive) {
+      res.set('Connection', 'close')
+    }
+    next()
+  })
 
   server.use('/api', apiRouter)
 
