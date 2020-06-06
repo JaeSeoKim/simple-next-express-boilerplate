@@ -2,8 +2,11 @@ import express from 'express'
 
 import apiRouter from './routes/apiRouter'
 
-const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
+if (dev) {
+  require('dotenv').config()
+}
+const port = parseInt(process.env.PORT, 10) || 3000
 
 const server = express()
 

@@ -22,17 +22,22 @@
     "dev": "nodemon --exec babel-node server/server.js",
     "dev:api": "nodemon --exec babel-node server/server-dev-api.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production babel-node server/server.js"
+    "start": "cross-env NODE_ENV=production babel-node server/server.js",
+    "pm2": "pm2 start ecosystem.config.js --env production",
+    "pm2:dev": "pm2 start ecosystem.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.1",
+    "@babel/register": "^7.10.1",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "next": "latest",
+    "pm2": "^4.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "swr": "^0.2.2"
