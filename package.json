@@ -18,7 +18,7 @@
     "boilerplate",
     "docker"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node server/server.js",
     "dev:api": "nodemon --exec babel-node server/server-dev-api.js",
