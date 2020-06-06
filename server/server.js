@@ -38,7 +38,7 @@ app.prepare().then(() => {
   if (process.env.PM2 === 'PM2') {
     process.on('SIGINT', () => {
       isDisableKeepAlive = true
-      app.close(() => {
+      server.close(() => {
         console.log('> 😢 Server closed')
         process.exit(0)
       })
