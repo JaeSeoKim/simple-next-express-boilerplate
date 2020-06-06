@@ -12,6 +12,14 @@
 - dev:api - Only `/api` requests work (`nodemon --exec babel-node server/server-dev-api.js`)
 - build - Next Build (`next build`)
 - start - Next Start (`cross-env NODE_ENV=production babel-node server/server.js`)
+- pm2 - Run with pm2 Cluster Mode (`pm2 start ecosystem.config.js --env production`)
+- pm2:dev - Run with pm2 Cluster Mode(dev) (`pm2 start ecosystem.config.js`)
+
+---
+
+### Dokcer
+
+- build - `./cicd/build.sh`
 
 ---
 
@@ -20,11 +28,17 @@
 ```
 .
 ├── README.md
+├── cicd
+│   ├── Dockerfile
+│   ├── build.sh
+│   └── startup.sh
+├── ecosystem.config.js
 ├── lib
 │   └── utils
 │       └── useRequest.js
 ├── next.config.js
 ├── nodemon.json
+├── package-lock.json
 ├── package.json
 ├── pages
 │   ├── [id].js
@@ -33,7 +47,7 @@
 │   └── index.js
 ├── public
 │   └── robots.txt
-├── server --> for Express.js (/API)
+├── server
 │   ├── api
 │   │   └── user
 │   │       └── getUser.js
@@ -43,6 +57,5 @@
 │   │   └── userRouter.js
 │   ├── server-dev-api.js
 │   └── server.js
-└── yarn.lock
-
+└── server-register.js
 ```

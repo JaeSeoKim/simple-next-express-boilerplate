@@ -15,7 +15,8 @@
     "next.js",
     "express",
     "react",
-    "boilerplate"
+    "boilerplate",
+    "docker"
   ],
   "license": "ISC",
   "scripts": {
