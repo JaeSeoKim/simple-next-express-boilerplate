@@ -17,7 +17,7 @@
 
 ---
 
-### Dokcer
+### Docker
 
 - build - `./cicd/build.sh`
 
