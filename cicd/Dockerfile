@@ -17,6 +17,4 @@ COPY . /usr/src/app
 RUN npm run build
 
 # Running the app
-COPY cicd/startup.sh /usr/src/app/
-RUN chmod u+x cicd/startup.sh
-CMD ["/bin/sh","cicd/startup.sh"]
+CMD ["pm2-runtime", "ecosystem.config.js"]
