@@ -1,5 +1,7 @@
 # Simple Next.js + Custom Express Server Boilerplate
 
+> TypeScript Version: [simple-type-next-express-boilerplate](https://github.com/JaeSeoKim/simple-type-next-express-boilerplate)
+
 `/api` -> `Express Server`
 
 `*` -> `Next RequestHandler`
@@ -69,5 +71,4 @@ Test Run Command: `docker run -p 3000:3000 simple-next-express`
 
 ### ToDo
 
-- TypeScript
 - ETC...
