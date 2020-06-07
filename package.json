@@ -3,21 +3,6 @@
   "description": "Simple Next.js + Custom Express Server Boilerplate",
   "author": "JaeSeoKim",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JaeSeoKim/simple-next-express-boilerplate.git"
-  },
-  "homepage": "https://github.com/JaeSeoKim/simple-next-express-boilerplate#readme",
-  "bugs": {
-    "url": "https://github.com/JaeSeoKim/simple-next-express-boilerplate/issues"
-  },
-  "keywords": [
-    "next.js",
-    "express",
-    "react",
-    "boilerplate",
-    "docker"
-  ],
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node server/server.js",

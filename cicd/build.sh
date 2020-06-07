@@ -1,3 +1,3 @@
 #! /bin/bash
 
-docker build --tag next-server -f ./cicd/Dockerfile .
+docker build --tag simple-next-express -f ./cicd/Dockerfile .

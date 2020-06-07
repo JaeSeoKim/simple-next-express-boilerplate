@@ -15,7 +15,7 @@ let isDisableKeepAlive = false
 app.prepare().then(() => {
   const server = express()
 
-  server.use((req, res, next) => {
+  server.use((_, res, next) => {
     if (isDisableKeepAlive) {
       res.set('Connection', 'close')
     }
@@ -34,14 +34,11 @@ app.prepare().then(() => {
     console.log(`> ✨Ready on http://localhost:${port}`)
   })
 
-  // for pm2
-  if (process.env.PM2 === 'PM2') {
-    process.on('SIGINT', () => {
-      isDisableKeepAlive = true
-      appServer.close(err => {
-        console.log('> 😢 Server closed')
-        process.exit(err ? 1 : 0)
-      })
+  process.on('SIGINT', () => {
+    isDisableKeepAlive = true
+    appServer.close(err => {
+      console.log('> 😢 Server closed')
+      process.exit(err ? 1 : 0)
     })
-  }
+  })
 })

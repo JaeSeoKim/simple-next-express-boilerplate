@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'server',
       script: './server-register.js',
-      instances: 0,
+      instances: 2,
       exec_mode: 'cluster',
       wait_ready: true,
       listen_timeout: 50000,

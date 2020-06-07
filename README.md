@@ -19,7 +19,12 @@
 
 ### Docker
 
+Default Tag: `simple-next-express`
+
+Test Run Command: `docker run -p 3000:3000 simple-next-express`
+
 - build - `./cicd/build.sh`
+- build(with pm2) - `./cicd/build-pm2.sh`
 
 ---
 
@@ -27,11 +32,13 @@
 
 ```
 .
+├── LICENSE
 ├── README.md
 ├── cicd
 │   ├── Dockerfile
-│   ├── build.sh
-│   └── startup.sh
+│   ├── Dockerfile-pm2
+│   ├── build-pm2.sh
+│   └── build.sh
 ├── ecosystem.config.js
 ├── lib
 │   └── utils
