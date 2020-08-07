@@ -13,8 +13,8 @@
     "pm2:dev": "pm2 start ecosystem.config.js"
   },
   "dependencies": {
-    "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.5",
+    "@babel/node": "^7.10.1",
     "@babel/register": "^7.10.5",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
@@ -26,7 +26,7 @@
     "pm2": "^4.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "swr": "^0.2.2"
+    "swr": "^0.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
